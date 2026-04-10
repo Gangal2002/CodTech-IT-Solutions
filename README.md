@@ -1,15 +1,21 @@
-# Selenium Login Automation
+# Selenium Login Automation – CodTech Internship Task 1
 
+## Project Overview
 This project automates the login functionality of a sample web application using Selenium WebDriver and Java.
 
-## Features
-- Automated login using valid credentials
-- Navigation verification
-- Logout functionality
-- Execution screenshots included
+## Automated Test Flow
+1. Launch Chrome browser
+2. Open login page
+3. Enter username and password
+4. Click login button
+5. Verify successful login
+6. Logout and close browser
 
-## Tools Used
+## Tools & Technologies
 - Selenium WebDriver
 - Java
 - IntelliJ IDEA
-- Google Chrome
+- Git & GitHub
+
+## Outcome
+Successfully automated login and navigation workflow and generated test execution report.
