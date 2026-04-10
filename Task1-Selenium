@@ -1,0 +1,48 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class LoginTest {
+    public static void main(String[] args) throws InterruptedException {
+
+        WebDriver driver = new ChromeDriver();
+
+        //Open Website
+        driver.get("https://practicetestautomation.com/practice-test-login/");
+        driver.manage().window().maximize();
+
+        Thread.sleep(2000);
+
+        //Enter Username
+        driver.findElement(By.id("username")).sendKeys("student");
+
+        //Enter Password
+        driver.findElement(By.id("password")).sendKeys("Password1w23");
+
+        Thread.sleep(2000);
+
+        //Click Login
+        driver.findElement(By.id("submit")).click();
+
+        Thread.sleep(3000);
+
+        //Verify Successful Login
+        String expectedURL = "https://practicetestautomation.com/logged-in-successfully/";
+        String actualURL = driver.getCurrentUrl();
+
+        if(actualURL.equals(expectedURL)){
+            System.out.println("✅ TEST PASSED : Login Successful");
+        } else {
+            System.out.println("❌ TEST FAILED : Login Failed");
+        }
+
+        Thread.sleep(2000);
+
+        //Click Logout
+        driver.findElement(By.linkText("Log out")).click();
+
+        Thread.sleep(2000);
+
+        driver.quit();
+    }
+}
